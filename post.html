@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Electron Template</title>
+
+    <!-- FAVICONS -->
+    <!-- Default -->
+    <link rel="icon" type="image/png" href="path/to/favicon.png" />
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="path/to/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weking">
+    <link rel="apple-touch-icon" href="path/to/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="path/to/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#21446B">
+
+    <!-- Weking Stylesheet -->
+    <link rel="stylesheet" href="dist/css/weking.min.css">
+    <link rel="stylesheet" href="dist/css/weking-theme.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- SITE -->
+    <main class="site row row-gutters">
+        <div class="site_wrap col col_sm9">
+            <!-- HEADER -->
+            <header class="header">
+                <nav class="menu">
+                    <div class="menu_header">
+                        <a href="index.html" class="menu_a menu_brand">Electron</a>
+                        <label class="btn menu_burger" for="menu_trigger">Show menu</label>
+                    </div>
+
+                    <input type="checkbox" id="menu_trigger" class="menu_trigger">
+
+                    <ul class="menu_ul">
+                        <li class="menu_li"><a href="blog.html" class="menu_a">Blog</a></li>
+                        <li class="menu_li menu_active"><a href="post.html" class="menu_a">Blog Post</a></li>
+                        <li class="menu_li"><a href="custom.html" class="menu_a">Custom</a></li>
+                        <li class="menu_li menu_li-parent">
+                            <a class="menu_a">Dropdown</a>
+                            <ul class="menu_ul-dropdown">
+                                <li class="menu_li"><a href="#" class="menu_a">Dropdown Link 1</a></li>
+                                <li class="menu_li"><a href="#" class="menu_a">Dropdown Link 2</a></li>
+                                <li class="menu_li"><a href="#" class="menu_a">Dropdown Link 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="menu_ul menu_user">
+                        <li class="menu_li">
+                            <a href="#" class="btn btn-primary">Sign Up</a>
+                            <a href="#" class="btn btn-default-flat">Sign In</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- POSTS LOOP -->
+            <section class="content">
+            
+                <article class="post">
+                    <figure class="post_thumb"><img src="dist/img/post.jpg" alt=""></figure>
+                    <div class="post_content">
+                        <h2 class="post_title">
+                            <a href="#" class="typo_h3">Lorem ipsum dolor sit amet.</a>
+                            <span class="typo_title"> by </span>
+                            <a href="#" class="typo_title">Admin</a>
+                        </h2>
+                        <p class="post_lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem nemo earum iure sed laborum aut sint. Harum fuga ab, sunt iure eos rerum, distinctio voluptates amet quae cum pariatur accusamus.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis voluptatem consectetur totam, veniam maiores sapiente hic labore modi praesentium magni voluptate voluptatum ipsam reprehenderit, distinctio quis unde quibusdam pariatur ducimus.</p>
+                        <p>Nesciunt nam doloribus fugit tempora pariatur. Reprehenderit quam, vero nemo magnam aperiam vel praesentium quod harum veniam recusandae inventore officia totam, cumque laudantium adipisci unde voluptate quidem perspiciatis rem illum.</p>
+                        <p>Hic nemo, eveniet nisi voluptatem rem necessitatibus culpa expedita animi est labore nobis corporis laborum id, officiis fugit quaerat soluta incidunt, facere sequi. Enim nisi a minus, provident sint sed.</p>
+                        <p>Dolorem molestiae totam dolor officia soluta magnam at earum consequuntur illo doloremque cumque cupiditate itaque molestias velit, ipsam eligendi fugiat libero delectus rem reiciendis. Id tempora quas autem illum quam!</p>
+                        <p>Hic tempore recusandae, eaque expedita amet tempora beatae nemo repudiandae. Aliquam nesciunt deleniti dolores repudiandae odit! Qui placeat, quas molestias dicta deserunt suscipit non similique id aspernatur cupiditate nesciunt nisi?</p>
+                    </div>
+                </article>
+                
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer clearfix">
+        <div class="footer_container col col_sm8-smOffset2">
+            <div class="row row-gutters">
+
+                <article class="col col_sm3">
+                    <p class="footer_title1">Home</p>
+                    <ul>
+                        <li><a class="footer_copy" href="index.html">Electron <i>&copy; 2015</i></a></li>
+                        <li>
+                            <a class="footer_copy" href="https://github.com/weking/weking-frontend" target="_blank">Electron build with Weking</a>
+                        </li>
+                        <li>
+                            <a class="footer_copy" href="https://unsplash.com/" target="_blank">Demo Images by Unsplash</a>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="col col_sm3">
+                    <p class="footer_title2">Services</p>
+
+                    <ul>
+                        <li><a href="#">3D modeling</a></li>
+                        <li><a href="#">Web development</a></li>
+                        <li><a href="#">Mobile development</a></li>
+                        <li><a href="#">Web &amp; Print Design</a></li>
+                    </ul>
+                </article>
+
+                <article class="col col_sm3">
+                    <p class="footer_title3">Follow us</p>
+
+                    <ul>
+                        <li><a href="https://plus.google.com/u/0/109437832489382753652" target="_blank">Google+</a></li>
+                        <li><a href="https://twitter.com/genteelknight" target="_blank">Twitter</a></li>
+                        <li><a href="https://github.com/genteelknight" target="_blank">Github</a></li>
+                    </ul>
+                </article>
+
+                <article class="col col_sm3">
+                    <p class="footer_title4">Clients</p>
+
+                    <ul>
+                        <li><a href="#">Login Area</a></li>
+                        <li><a href="#">Support Center</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

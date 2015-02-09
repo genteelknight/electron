@@ -1,0 +1,293 @@
+// Let's customize Weking
+// ======================
+
+// Import global variables & mixins
+@import "utilities/index";
+
+// Create a custom color swatch
+@custom:         @custom500;
+
+@custom50:       #E8F5E9;
+@custom100:      #C8E6C9;
+@custom200:      #A5D6A7;
+@custom300:      #81C784;
+@custom400:      #66BB6A;
+@custom500:      #4CAF50;
+@custom600:      #43A047;
+@custom700:      #388E3C;
+@custom800:      #2E7D32;
+@custom900:      #1B5E20;
+
+@customA100:     #B9F6CA;
+@customA200:     #69F0AE;
+@customA400:     #00E676;
+@customA700:     #00C853;
+
+// Let do some magic
+
+.menu {
+  // Rounded corners for menu
+  .lh-border-radius(@basic-radius);
+}
+
+// Your code begins here
+// =====================
+/* Debug vertical rythm */
+body {
+  // background-image: -moz-linear-gradient(bottom, rgba(240, 162, 196, 0.50) 5%, rgba(240, 162, 196, 0) 5%);
+  // background-image: -webkit-linear-gradient(bottom, rgba(240, 162, 196, 0.50) 5%, rgba(240, 162, 196, 0) 5%);
+  // background-image: linear-gradient(to top, rgba(240, 162, 196, 0.50) 5%, rgba(240, 162, 196, 0) 5%);
+  // -moz-background-size: 100% 24px;
+  // -o-background-size: 100% 24px;
+  // -webkit-background-size: 100% 24px;
+  // background-size: 100% 24px;
+  // background-position: left top;
+  position:relative;
+  z-index:0;
+}
+
+.accordion[class*=theme] {
+  .accordion {
+    &_content {
+      background: @grey100;
+      .z-depth-1;
+    }
+
+    &_trigger {
+      &:checked + .accordion_content {
+        padding: @font-line-height/2 @grid-baseline*2;
+      }
+    }
+  }
+}
+
+.tabs[class*=theme] {
+  .tabs {
+    &_content {
+      background: @white;
+      padding: @font-line-height/2;
+      .z-depth-1;
+    }
+  }
+}
+
+// SITE - MAIN CONTAINER
+.site {
+  background: @body-bg;
+  padding-top: @font-line-height;
+  padding-bottom: @font-line-height;
+  position:relative;
+  z-index:1;
+  .z-depth-1;
+
+  &_wrap {
+    float: none;
+    margin: 0 auto;
+  }
+
+  // CUSTOM
+  &[class*=custom] {
+    background: @blue700;
+    color: @white;
+
+    .menu {
+      .menu-gen('blue', @white);
+    }
+
+    .content{
+      a {
+        color: @grey400;
+
+        &:hover,
+        &:focus {
+          color: @grey100;
+        }
+      }
+    }
+  }
+}
+
+// HEADER
+.header {
+  margin-bottom: @font-line-height*2;
+
+  // MENU
+  .menu {
+    margin-bottom: @font-line-height;
+
+    &_trigger:checked ~ .menu_user {
+      visibility: visible;
+      opacity: 1;
+      height: auto;
+    }
+
+    &_user {
+      padding-left: @grid-baseline;
+      padding-right: @grid-baseline;
+
+      @media (min-width: @screen-sm) {
+        float: right;
+      }
+    }
+  }
+
+  // HERO
+  &_hero {
+    padding: @font-line-height;
+
+    img {
+      .z-depth-1;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  // Page Title
+  .pageTitle {
+    text-align: center;
+
+    span {
+      display: inline;
+
+      &.typo_headline {
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.home_headline {
+  font-weight: 300;
+  .font(60px);
+
+  @media (min-width: @screen-sm) {
+    .font(80px);
+  }
+  @media (min-width: @screen-lg) {
+    .font(112px);
+  }
+}
+
+// CONTENT
+.content {
+  padding: @font-line-height 0;
+}
+
+.post {
+  padding: @font-line-height 0 @font-line-height*2;
+  margin-bottom: @font-line-height;
+  border-bottom: 1px solid @grey300;
+
+  // Post title
+  &_title {
+    * {
+      display: inline;
+      text-decoration: none;
+    }
+  }
+
+  &_lead {
+    .font(18px);
+  }
+
+  &_readMore {
+    .font(14px);
+    text-decoration: none;
+    color: @white !important;
+  }
+}
+
+// Paginator
+.paginator {
+  text-align: center;
+
+  .btn {
+    width: @font-line-height*3;
+    height: @font-line-height*3;
+    line-height: @font-line-height*3;
+  }
+}
+
+// FEATURES
+.features {
+  // Feature item
+  &_item {
+    margin-top: @font-line-height;
+    margin-bottom: @font-line-height;
+
+    figure {
+      text-align: center;
+
+      .icon {
+        font-size: @font-line-height*7;
+        line-height: @font-line-height*7;
+      }
+    }
+
+    @media (min-width: @screen-sm) {
+      &:nth-child(2n+1) {
+        .col {
+          float: right;
+
+          &:last-child {
+            text-align: right;
+          }
+        }
+      } 
+    }
+  }
+
+  // Call to Action
+  &_cta {
+    text-align: center;
+  }
+}
+
+// FOOTER
+.footer {
+  padding: @font-line-height 0;
+  position: relative;
+  z-index: -2;
+  background-color: @grey900;
+
+  @media (min-width: @screen-sm) {  
+    height: @font-line-height*9;
+    
+    &_container {
+      position: fixed;
+      bottom: @font-line-height;
+      z-index: -1;
+    }
+
+    ul {
+      margin: 0;
+    }
+  }
+
+  &_title1, &_title2, &_title3, &_title4 {
+    line-height: @font-line-height*1.5;
+    margin-bottom: @font-line-height/2;
+    padding: 0 @grid-baseline*2;
+    font-weight: bold;
+    color: @white;
+    text-transform: uppercase;
+  }
+
+  &_title1 {
+    background: @blue;
+  }
+
+  &_title2 {
+    background: @green;
+  }
+
+  &_title3 {
+    background: @red;
+  }
+
+  &_title4 {
+    background: @orange;
+  }
+}
