@@ -166,6 +166,29 @@ body {
   text-decoration: none;
   color: #ffffff !important;
 }
+.post_comments_title {
+  margin-bottom: 24px;
+}
+.post_comments_item_header * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.post_comments_item_avatar {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 0;
+  margin-right: 24px;
+  -webkit-border-radius: 99px;
+  -moz-border-radius: 99px;
+  border-radius: 99px;
+}
+.post_comments_item_reply {
+  float: right;
+  margin: 24px 0;
+}
+.post_comments_thread {
+  padding-left: 72px;
+}
 .paginator {
   text-align: center;
 }

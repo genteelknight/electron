@@ -197,6 +197,41 @@ body {
     text-decoration: none;
     color: @white !important;
   }
+
+  // Comments
+  &_comments {
+    &_title {
+      margin-bottom: @font-line-height;
+    }
+    
+    // Single Comment
+    &_item {
+      &_header * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      // Avatar
+      &_avatar {
+        width: @font-line-height*3;
+        height: @font-line-height*3;
+        margin-bottom: 0;
+        margin-right: @font-line-height;
+        .lh-border-radius(99px);
+      }
+
+      // Reply link
+      &_reply {
+        float: right;
+        margin: @font-line-height 0;
+      }
+    }
+
+    // Thread
+    &_thread {
+      padding-left: @font-line-height*3;
+    }
+  }
 }
 
 // Paginator
