@@ -47,7 +47,6 @@
     color: @grey900;
     .font(12px);
     visibility: hidden;
-    height: 0;
     .lh-opacity(0);
     .lh-border-radius(@basic-radius);
     .animate(~"opacity, visibility");
@@ -56,36 +55,31 @@
   // Show tooltip on hover
   &:hover:after {
     visibility: visible;
-    height: auto;
     .lh-opacity(1);
   }
 
   // Top
   &[class*=top]:after {
-    margin-left: @font-line-height * -2.5;
     bottom: 100%;
-    left: 50%;
+    left: 0;
   }
 
   // Bottom
   &[class*=bottom]:after {
-    margin-left: @font-line-height * -2.5;
     top: 100%;
-    left: 50%;
+    left: 0;
   }
 
   // Right
   &[class*=right]:after {
-    margin-left: 8px;
     left: 100%;
-    bottom: -25%;
+    top: 0;
   }
 
   // Left
   &[class*=left]:after {
-    margin-right: 8px;
     right: 100%;
-    top: -25%;
+    top: 0;
   }
 
   // Colors
@@ -152,7 +146,6 @@
     background: @grey;
     color: @grey900;
     visibility: hidden;
-    height: 0;
     .lh-opacity(0);
     .lh-border-radius(@basic-radius);
     .animate(~"opacity, visibility");
@@ -166,36 +159,31 @@
   // Show popover when trigger is checked
   &_trigger:checked + &_content {
     visibility: visible;
-    height: auto;
     .lh-opacity(1);
   }
 
   // Top
   &[class*=top] &_content {
-    margin-left: @font-line-height * -2.5;
     bottom: 100%;
-    left: 50%;
+    left: 0;
   }
 
   // Bottom
   &[class*=bottom] &_content {
-    margin-left: @font-line-height * -2.5;
     top: 100%;
-    left: 50%;
+    left: 0;
   }
 
   // Right
   &[class*=right] &_content {
-    margin-left: 8px;
     left: 100%;
-    bottom: -25%;
+    top: 0;
   }
 
   // Left
   &[class*=left] &_content {
-    margin-right: 8px;
     right: 100%;
-    top: -25%;
+    top: 0;
   }
 
   // Colors

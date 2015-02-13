@@ -158,7 +158,7 @@ blockquote {
 
 hr {
   border: 0;
-  border-top: 1px solid darken(@grey, 15);
+  border-top: 1px solid @grey300;
   border-bottom: 1px solid @white;
   margin: (@font-line-height - 2px)/2 0;
 }
@@ -167,7 +167,7 @@ hr {
 
 ol,
 ul {
-  padding: 0 0 0 @font-line-height;
+  padding: 0 0 0 @font-line-height*2;
   ol,
   ul {
     margin: 0;
@@ -343,132 +343,4 @@ svg:not(:root) {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-// Clearfix
-.clearfix {
-  .clearfix;
-}
-
-// Container
-.container {
-  margin: 0 auto;
-  width: 85%;
-  max-width: 1200px;
-  .clearfix;
-}
-
-// Hide component
-.hidden {
-  display: none;
-}
-
-// Responsive utility classes
-//
-// 'visible-xs' Visible on extra small screen (phones) only
-// 'visible-sm' Visible on small screen (tablets) only
-// 'visible-md' Visible on medium screen (desktop) only
-// 'visible-lg' Visible on large screen (wide desktop) only
-//
-// 'hidden-xs' Hidden on extra small screen (phones) only
-// 'hidden-sm' Hidden on small screen (tablets) only
-// 'hidden-md' Hidden on medium screen (desktop) only
-// 'hidden-lg' Hidden on large screen (wide desktop) only
-
-.visible-xs {
-  display: inherit !important;
-}
-
-.visible-sm {
-  display: none !important;
-}
-
-.visible-md {
-  display: none !important;
-}
-
-.visible-lg {
-  display: none !important;
-}
-
-.hidden-xs {
-  display: none !important;
-}
-
-// Tablet
-@media (min-width: @screen-sm) {
-  .visible-xs {
-    display: none !important;
-  }
-  .visible-sm {
-    display: inherit !important;
-  }
-  .visible-md {
-    display: none !important;
-  }
-  .visible-lg {
-    display: none !important;
-  }
-
-  .hidden-xs {
-    display: inherit !important;
-  }
-  .hidden-sm {
-    display: none !important;
-  }
-}
-
-// Desktop
-@media (min-width: @screen-md) {
-  .visible-xs {
-    display: none !important;
-  }
-  .visible-sm {
-    display: none !important;
-  }
-  .visible-md {
-    display: inherit !important;
-  }
-  .visible-lg {
-    display: none !important;
-  }
-
-  .hidden-xs {
-    display: inherit !important;
-  }
-  .hidden-sm {
-    display: inherit !important;
-  }
-  .hidden-md {
-    display: none !important;
-  }
-}
-
-// Large Desktops
-@media (min-width: @screen-lg) {
-  .visible-xs {
-    display: none !important;
-  }
-  .visible-sm {
-    display: none !important;
-  }
-  .visible-md {
-    display: none !important;
-  }
-  .visible-lg {
-    display: inherit !important;
-  }
-
-  .hidden-xs {
-    display: inherit !important;
-  }
-  .hidden-sm {
-    display: inherit !important;
-  }
-  .hidden-md {
-    display: inherit !important;
-  }
-  .hidden-lg {
-    display: none !important;
-  }
 }
